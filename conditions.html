@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Demo Website!</title>
+    <meta name="description" content="A demo website for messing around with stuff."></meta>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="conditions.html">Conditions</a></li>
+        </ul>
+    </nav>
+
+    <h1>Conditions</h1>
+
+    <main style="margin-left: 30%; margin-right: 30%;">
+
+        <ul class="drawer">
+            <li>
+                <label for="conditions-1">Blinded</label>
+                <input type="radio" name="drawer" id="conditions-1" checked>
+                <div class="content">
+                    <p>
+                        A blinded creature can't see and automatically fails any
+                        ability check that requires sight. Attack rolls against a
+                        blinded creature have advantage. A blinded creature can
+                        attack creatures with a blind attack if they are aware of
+                        them.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-2">Bleeding</label>
+                <input type="radio" name="drawer" id="conditions-2">
+                <div class="content">
+                    <p>
+                        At the start of each of their turns, for each level of bleeding
+                        they have, a creature with this condition takes damage to
+                        their hit points equal to half their healing rate (rounded
+                        down). A dying creature with any levels of this condition
+                        fails a death save at the start of their turns. If a creature
+                        who has any levels of bleeding is healed, they do not gain
+                        any hit points, instead they remove two levels of bleeding.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-3">Burning</label>
+                <input type="radio" name="drawer" id="conditions-3">
+                <div class="content">
+                    <p>
+                        A burning creature takes 1d10 fire damage at the start of
+                        their turns. They can spend 6 AP to put themselves out.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-4">Buzzed</label>
+                <input type="radio" name="drawer" id="conditions-4">
+                <div class="content">
+                    <p>
+                        While buzzed you have disadvantage on all Intelligence
+                        and Perception ability and skill checks and advantage on
+                        all Endurance and Strength ability and skill checks.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-5">Corroded</label>
+                <input type="radio" name="drawer" id="conditions-5">
+                <div class="content">
+                    <p>
+                        While you are corroded, your DT is reduced by 5.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-6">Dazed</label>
+                <input type="radio" name="drawer" id="conditions-6">
+                <div class="content">
+                    <p>
+                        While you are dazed, your maximum AP is reduced by half
+                        (rounded down) and you do not recycle any unused AP at
+                        the start of your next turn.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-7">Dehydration</label>
+                <input type="radio" name="drawer" id="conditions-7">
+                <div class="content">
+                    <p>
+                        Whenever you roll a d20, the total is subtracted by 1 for
+                        each level of dehydration you have. At the end of each
+                        day, or every 24 hours, if you did not consume at least
+                        three drinks or a drink with the hydrating property, you
+                        gain three levels of dehydration. When you gain your tenth
+                        level of dehydration, you die.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-8">Drunk</label>
+                <input type="radio" name="drawer" id="conditions-8">
+                <div class="content">
+                    <p>
+                        While drunk, you gain the effects of buzzed, you have 2
+                        less AP, and your maximum stamina points increase by a
+                        number equal to your level.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-9">Encumbered</label>
+                <input type="radio" name="drawer" id="conditions-9">
+                <div class="content">
+                    <p>
+                        An encumbered creature moves slowly (2 AP per 5 feet).
+                        The creature's travel pace is halved, and you gain a level
+                        of Fatigue each hour you are encumbered.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-10">Exhaustion</label>
+                <input type="radio" name="drawer" id="conditions-10">
+                <div class="content">
+                    <p>
+                        Whenever you roll a d20, the total is subtracted by 1 for
+                        each level of exhaustion you have. When you gain your
+                        tenth level of exhaustion, you die. If you are a human,
+                        ghoul, or super mutant; you can remove one level of
+                        exhaustion after resting for at least 6 hours. If you are a
+                        robot or gen-2 synth; you can remove one level of
+                        exhaustion after resting for at least 2 hours.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-11">Fatigue</label>
+                <input type="radio" name="drawer" id="conditions-11">
+                <div class="content">
+                    <p>
+                        Whenever you roll a d20, the total is subtracted by 1 for
+                        each level of fatigue you have. You can only ever have a
+                        total of nine levels of fatigue. At the end of each of your
+                        turns you lose one level of fatigue.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-12">Frightened</label>
+                <input type="radio" name="drawer" id="conditions-12">
+                <div class="content">
+                    <p>
+                        TODO - complete this section lol
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-13">Grappled</label>
+                <input type="radio" name="drawer" id="conditions-13">
+                <div class="content">
+                    <p>
+                        A grappled creature cannot spend AP to move.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-14">Hammered</label>
+                <input type="radio" name="drawer" id="conditions-14">
+                <div class="content">
+                    <p>
+                        While drunk, you gain the effects of buzzed and drunk.
+                        Additionally, your maximum stamina points increase by a
+                        number equal to your level and whenever you roll a d20 it
+                        is subtracted by 5.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-15">Heavily Encumbered</label>
+                <input type="radio" name="drawer" id="conditions-15">
+                <div class="content">
+                    <p>
+                        A heavily encumbered creature moves slowly (3 AP per 5
+                        feet). The creature's travel pace is halved. Every hour a
+                        heavily encumbered creature travels reduces their
+                        maximum stamina points by 2 (resets upon sleeping)
+                        Every day a heavily encumbered creature travels reduces
+                        their carry load capacity by 10 (resets upon traveling a day
+                        without being encumbered)
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-16">Hunger</label>
+                <input type="radio" name="drawer" id="conditions-16">
+                <div class="content">
+                    <p>
+                        Whenever you roll a d20, the total is subtracted by 1 for
+                        each level of hunger you have. At the end of each day, or
+                        after 24 hours, if you did not consume at least one food,
+                        you gain one level of hunger. When you gain your tenth
+                        level of hunger, you die.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-17">Invisible</label>
+                <input type="radio" name="drawer" id="conditions-17">
+                <div class="content">
+                    <p>
+                        An invisible creature is impossible to see. For the purpose
+                        of hiding, the creature is heavily obscured. The creature's
+                        location can be detected by any noise it makes or any
+                        tracks it leaves. Attack rolls against the creature have
+                        disadvantage, and the creature's attack rolls have
+                        advantage.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-18">Poisoned</label>
+                <input type="radio" name="drawer" id="conditions-18">
+                <div class="content">
+                    <p>
+                        A poisoned creature has disadvantage on all d20 rolls.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-19">Prone</label>
+                <input type="radio" name="drawer" id="conditions-19">
+                <div class="content">
+                    <p>
+                        A prone creature's only movement option is to crawl,
+                        unless it stands up and thereby ends the condition. The
+                        creature has disadvantage on attack rolls. An attack roll
+                        against the creature has advantage if the attacker is within
+                        5 feet of the creature. Otherwise, the attack roll has
+                        disadvantage.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-20">Radiation</label>
+                <input type="radio" name="drawer" id="conditions-20">
+                <div class="content">
+                    <p>
+                        Whenever you roll a d20, the total is subtracted by 1 for
+                        each level of radiation you have. Additionally, each time
+                        you gain a level of radiation you take 1d12 radiation
+                        damage to your hit points. This damage cannot be healed
+                        until you are no longer in an irradiated zone. If this
+                        radiation damage reduces you to 0 hit points, or you would
+                        gain your 10th level of radiation; you die. Roll a Luck
+                        check with a DC of 20. If you succeed, you return to life as
+                        a ghoul with 1 hit point. If you roll below a 5 on this check,
+                        you instead return to life as a feral ghoul and the GM
+                        controls your character.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-21">Restrained</label>
+                <input type="radio" name="drawer" id="conditions-21">
+                <div class="content">
+                    <p>
+                        A restrained creature cannot move. When a restrained
+                        creature takes damage it cannot be subtracted from their
+                        stamina points.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-22">Shadowed</label>
+                <input type="radio" name="drawer" id="conditions-22">
+                <div class="content">
+                    <p>
+                        While you are shadowed, you cannot be detected via sight
+                        from creatures who do not have night vision. If a creature
+                        is aware of your presence and does not have night vision,
+                        they can attempt to target you with a blind attack.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-23">Shock</label>
+                <input type="radio" name="drawer" id="conditions-23">
+                <div class="content">
+                    <p>
+                        A creature who goes into shock has their stamina points
+                        immediately drop to 0 and starts their next turn with a
+                        maximum of 6 AP.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-24">Slowed</label>
+                <input type="radio" name="drawer" id="conditions-24">
+                <div class="content">
+                    <p>
+                        A slowed creature starts their turn with a maximum of 6 AP.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-25">Unconscious</label>
+                <input type="radio" name="drawer" id="conditions-25">
+                <div class="content">
+                    <p>
+                        When a creature becomes unconscious, it drops anything
+                        it was holding and all of its stamina points drop to 0. It
+                        can't move or speak, and is unaware of its surroundings.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <label for="conditions-26">Wasted</label>
+                <input type="radio" name="drawer" id="conditions-26">
+                <div class="content">
+                    <p>
+                        While wasted, you gain the effects of buzzed, drunk, and
+                        hammered. Additionally, you remember nothing from the
+                        time while you're wasted and you fall unconscious after an
+                        hour.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </main>
+</body>

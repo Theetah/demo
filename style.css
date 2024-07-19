@@ -1,0 +1,173 @@
+@font-face {
+    font-family: "ChivoMono";
+    src: url(fonts/ChivoMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: "NotoSans";
+    src: url(fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "IBMPlexMono";
+    src: url(fonts/IBMPlexMono-Regular.ttf);
+}
+
+/*
+/////////////
+/// STUFF ///
+/////////////
+*/
+
+body {
+    margin: 0px;
+
+    background-color: #1b1b20;
+}
+
+main {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    padding-left: 1ch;
+    padding-right: 1ch;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-radius: 1ch;
+
+    box-shadow: 10px 10px 5px #18181a;
+
+    background-color: #26262b;
+}
+
+h1 {
+    margin-top: 3%;
+
+    border-bottom-color: #dddddd;
+    border-bottom-style: solid;
+
+    color: #dddddd;
+    font-family: ChivoMono, monospace;
+    text-align: center;
+}
+
+h2 {
+    padding-left: 1ch;
+
+    border-bottom-color: #dddddd;
+    border-bottom-style: solid;
+
+    color: #dddddd;
+    font-family: ChvioMono, monospace;
+    font-weight: lighter;
+}
+
+p {
+    color: #dddddd;
+    line-height: 3ch;
+    font-family: NotoSans, sans-serif;
+}
+
+/*
+///////////////
+/// CLASSES ///
+///////////////
+*/
+
+/* COLLAPSIBLE UL */
+
+.drawer {
+    padding-left: 0;
+}
+
+.drawer li {
+    list-style: none;
+}
+
+.drawer label {
+    padding-top: 1.5ch;
+    padding-bottom: 0.5ch;
+    display: flex;
+    color: #dddddd;
+    font-family: ChivoMono, monospace;
+    text-indent: 1ch;
+    cursor: pointer;
+    background-color: #2b2b2f;
+    border-bottom-style: solid;
+    border-bottom-color: #333336;
+    transition:
+        color 0.2s,
+        font-weight 0.2s,
+        background-color 0.2s,
+        border-bottom-color 0.2s;
+}
+
+.drawer label + input[type="radio"] {
+    display: none;
+}
+
+.drawer .content {
+    color: #dddddd;
+    font-family: NotoSans, sans-serif;
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #2d2d30;
+    transition-property: max-height;
+    transition-duration: 0s;
+    border-style: hidden;
+    border-color: #343438;
+}
+
+.drawer label:hover{
+    color: white;
+    background-color: #343438;
+    border-bottom-color: #404045;
+}
+
+.drawer label + input[type="radio"]:checked + .content {
+    max-height: 400px;
+    border-style: inset;
+}
+
+/* NAVBAR */
+
+.navbar {
+    top: 0px;
+
+    position: sticky;
+}
+
+.navbar ul {
+    padding: 0px;
+    margin: 0px;
+
+    list-style-type: none;
+    overflow: hidden;
+
+    background-color: #121216;
+}
+
+.navbar a {
+    padding: 15px;
+
+    display: block;
+    float: left;
+
+    color: #dddddd;
+    font-family: IBMPlexMono, monospace;
+    text-decoration: none;
+    text-align: center;
+
+    transition:
+        color 0.2s,
+        background-color 0.2s;
+}
+
+.navbar a:hover {
+    color: white;
+    background-color: #19191d;
+}
