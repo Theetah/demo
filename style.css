@@ -21,7 +21,6 @@
 
 body {
     margin: 0px;
-
     background-color: #1b1b20;
 }
 
@@ -85,19 +84,27 @@ p {
 
 .drawer li {
     list-style: none;
+    display: grid;
+    grid-template-rows: 0fr;
 }
 
 .drawer label {
     padding-top: 1.5ch;
     padding-bottom: 0.5ch;
+    padding-right: 1ch;
+
     display: flex;
+    justify-content: space-between;
     color: #dddddd;
+
     font-family: ChivoMono, monospace;
     text-indent: 1ch;
     cursor: pointer;
+
     background-color: #2b2b2f;
     border-bottom-style: solid;
     border-bottom-color: #333336;
+
     transition:
         color 0.2s,
         font-weight 0.2s,
@@ -112,14 +119,18 @@ p {
 .drawer .content {
     color: #dddddd;
     font-family: NotoSans, sans-serif;
+
     padding: 0 10px;
     max-height: 0;
+
     overflow: hidden;
     background-color: #2d2d30;
-    transition-property: max-height;
-    transition-duration: 0s;
+
     border-style: hidden;
     border-color: #343438;
+
+    transition-property: max-height;
+    transition-duration: 0.5s;
 }
 
 .drawer label:hover{
@@ -129,8 +140,9 @@ p {
 }
 
 .drawer label + input[type="radio"]:checked + .content {
-    max-height: 400px;
+    max-height: 100%;
     border-style: inset;
+    grid-template-rows: 1fr;
 }
 
 /* NAVBAR */
