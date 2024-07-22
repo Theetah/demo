@@ -107,7 +107,6 @@ p {
 
     transition:
         color 0.2s,
-        font-weight 0.2s,
         background-color 0.2s,
         border-bottom-color 0.2s;
 }
@@ -126,9 +125,6 @@ p {
     overflow: hidden;
     background-color: #2d2d30;
 
-    border-style: hidden;
-    border-color: #343438;
-
     transition-property: max-height;
     transition-duration: 0.5s;
 }
@@ -141,8 +137,36 @@ p {
 
 .drawer label + input[type="radio"]:checked + .content {
     max-height: 100%;
-    border-style: inset;
     grid-template-rows: 1fr;
+}
+
+.collapse-button {
+    
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    color: #dddddd;
+    font-family: ChivoMono, monospace;
+    font-size: large;
+
+    cursor: pointer;
+    border-color: #343438;
+    border-style: inset;
+
+    background-color: #2d2d30;
+
+    transition:
+        color 0.2s,
+        border-color 0.2s,
+        background-color 0.2s;
+    
+}
+
+.collapse-button:hover {
+    color: white;
+    background-color: #343438;
+    border-color: #404045;
 }
 
 /* NAVBAR */
