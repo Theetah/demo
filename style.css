@@ -68,6 +68,7 @@ p {
   color: #dddddd;
   line-height: 3ch;
   font-family: NotoSans, sans-serif;
+  font-size: large;
 }
 
 /*
@@ -170,7 +171,7 @@ p {
 
   cursor: pointer;
   border-color: #343438;
-  border-style: inset;
+  border-style: hidden;
 
   background-color: #2d2d30;
 
