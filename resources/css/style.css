@@ -130,7 +130,7 @@ p {
     border-bottom-color 0.2s;
 }
 
-.drawer label + input[type="radio"] {
+.drawer label + input[type="checkbox"] {
   display: none;
 }
 
@@ -145,7 +145,6 @@ p {
   background-color: #2d2d30;
 
   transition-property: max-height;
-  transition-duration: 0.5s;
 }
 
 .drawer label:hover{
@@ -154,38 +153,9 @@ p {
   border-bottom-color: #404045;
 }
 
-.drawer label + input[type="radio"]:checked + .content {
+.drawer label + input[type="checkbox"]:checked + .content {
   max-height: 100%;
   grid-template-rows: 1fr;
-}
-
-.collapse-button {
-
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-
-  color: #dddddd;
-  font-family: ChivoMono, monospace;
-  font-size: large;
-
-  cursor: pointer;
-  border-color: #343438;
-  border-style: hidden;
-
-  background-color: #2d2d30;
-
-  transition:
-    color 0.2s,
-    border-color 0.2s,
-    background-color 0.2s;
-
-}
-
-.collapse-button:hover {
-  color: white;
-  background-color: #343438;
-  border-color: #404045;
 }
 
 /* NAVBAR */
