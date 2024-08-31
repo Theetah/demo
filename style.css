@@ -39,16 +39,16 @@ main {
 
   box-shadow: 10px 10px 5px #18181a;
 
-  background-color: #26262b;
+  background-color: #202026;
 }
 
 h1 {
   margin-top: 1rem;
 
-  border-bottom-color: #dddddd;
+  border-bottom-color: #bbbbbb;
   border-bottom-style: solid;
 
-  color: #dddddd;
+  color: #bbbbbb;
   font-family: ChivoMono, monospace;
   text-align: center;
 }
@@ -56,16 +56,16 @@ h1 {
 h2 {
   padding-left: 1ch;
 
-  border-bottom-color: #dddddd;
+  border-bottom-color: #bbbbbb;
   border-bottom-style: solid;
 
-  color: #dddddd;
+  color: #bbbbbb;
   font-family: ChvioMono, monospace;
   font-weight: lighter;
 }
 
 p {
-  color: #dddddd;
+  color: #bbbbbb;
   line-height: 3ch;
   font-family: NotoSans, sans-serif;
   font-size: large;
@@ -85,7 +85,7 @@ p {
 }
 
 .profile table {
-  color: #dddddd;
+  color: #bbbbbb;
   font-family: NotoSans, sans-serif;
   border-spacing: 1rem;
 }
@@ -114,15 +114,15 @@ p {
 
   display: flex;
   justify-content: space-between;
-  color: #dddddd;
-
-  font-family: ChivoMono, monospace;
-  text-indent: 1ch;
   cursor: pointer;
 
-  background-color: #2b2b2f;
+  color: #bbbbbb;
+  font-family: ChivoMono, monospace;
+  text-indent: 1ch;
+
+  background-color: #24242a;
+  border-bottom-color: #28282d;
   border-bottom-style: solid;
-  border-bottom-color: #333336;
 
   transition:
     color 0.2s,
@@ -130,25 +130,31 @@ p {
     border-bottom-color 0.2s;
 }
 
+.drawer h2 {
+  text-align: center;
+  padding-left: 0; /* don't even know if this is needed but just in case*/
+}
+
 .drawer label + input[type="checkbox"] {
   display: none;
 }
 
 .drawer .content {
-  color: #dddddd;
+  color: #bbbbbb;
   font-family: NotoSans, sans-serif;
 
   padding: 0 10px;
   max-height: 0;
 
   overflow: hidden;
-  background-color: #2d2d30;
+  background-color: #28282d;
 
-  transition-property: max-height;
+  transition:
+    max-height 0.33s;
 }
 
 .drawer label:hover{
-  color: white;
+  color: #dddddd;
   background-color: #343438;
   border-bottom-color: #404045;
 }
@@ -186,7 +192,7 @@ p {
   text-decoration: none;
   text-align: center;
 
-  color: #dddddd;
+  color: #bbbbbb;
 
   transition:
     color 0.2s,
@@ -221,8 +227,8 @@ p {
   font-weight: bold;
   border-radius: 1rem;
 
-  color: #dddddd;
-  background-color: #2b2b2f;
+  color: #bbbbbb;
+  background-color: #24242a;
 
 
   transition:
@@ -232,6 +238,6 @@ p {
 }
 
 .grid-container a:hover {
-  color: white;
+  color: #dddddd;
   background-color: #343438;
 }
