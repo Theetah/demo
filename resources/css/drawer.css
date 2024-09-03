@@ -10,6 +10,10 @@
   grid-template-rows: 0fr;
 }
 
+.drawer h2 {
+  text-align: center;
+}
+
 .drawer label {
   padding-top: 1.5ch;
   padding-bottom: 0.5ch;
@@ -31,10 +35,6 @@
     color 0.2s,
     background-color 0.2s,
     border-bottom-color 0.2s;
-}
-
-.drawer h2 {
-  text-align: center;
 }
 
 .drawer .content {

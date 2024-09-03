@@ -47,15 +47,18 @@
 #nav-content > ul {
   padding: 0;
   margin-top: 3rem;
+  grid-template-rows: 0fr;
+
+  display: grid;
   list-style-type: none;
   overflow: hidden;
 }
 
-#nav-content > ul a {
+#nav-content > ul > li > a {
   padding: 1rem;
   margin-left: 0px;
 
-  display: block;
+  display: grid;
 
   color: var(--default-fg);
   font-family: IBMPlexMono, monospace;
@@ -68,8 +71,79 @@
     background-color 0.2s;
 }
 
-#nav-content > ul a:hover {
+#nav-content > ul > li > a:hover {
   color: var(--focused-fg);
   background-color: var(--dark-gray-bg3);
 }
 
+#nav-content > ul > li > label {
+  padding: 1rem;
+  margin-left: 0px;
+
+  display: grid;
+  cursor: pointer;
+
+  color: var(--default-fg);
+  font-family: IBMPlexMono, monospace;
+  font-size: auto;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+}
+
+#nav-content > ul > li > label:hover {
+  color: var(--focused-fg);
+  background-color: var(--dark-gray-bg3);
+}
+
+#nav-content > ul > li > .sub-panel {
+  padding: 0;
+  max-height: 0;
+
+  overflow: hidden;
+  background-color: var(--darker-gray-bg4);
+
+  transition:
+    max-height 0.33s;
+}
+
+#nav-content > ul > li > input[type="checkbox"] {
+  display: none;
+}
+
+#nav-content > ul > li > input[type="checkbox"]:checked + .sub-panel {
+  max-height: 100%;
+  grid-template-rows: 1fr;
+}
+
+#nav-content > ul > li > .sub-panel > ul {
+  padding-left: 0;
+  text-indent: 2ch;
+
+  list-style-type: none;
+}
+
+#nav-content > ul > li > .sub-panel > ul > li > a {
+  padding: 1rem;
+  margin-left: 0px;
+
+  display: grid;
+
+  color: var(--default-fg);
+  font-family: IBMPlexMono, monospace;
+  font-size: auto;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+}
+
+#nav-content > ul > li > .sub-panel > ul > li > a:hover {
+  color: var(--focused-fg);
+  background-color: var(--gray-bg1);
+}
