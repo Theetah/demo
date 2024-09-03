@@ -1,0 +1,19 @@
+@import url("defaults.css");
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 20rem;
+}
+
+.profile table {
+  color: var(--default-fg);
+  font-family: NotoSans, sans-serif;
+  border-spacing: 1rem;
+}
+
+.profile img {
+  max-width: 50%;
+  max-height: inherit;
+}

@@ -1,27 +1,11 @@
-@font-face {
-  font-family: "ChivoMono";
-  src: url(fonts/ChivoMono-Regular.ttf);
-}
-
-@font-face {
-  font-family: "NotoSans";
-  src: url(fonts/NotoSans-Regular.ttf);
-}
-
-@font-face {
-  font-family: "IBMPlexMono";
-  src: url(fonts/IBMPlexMono-Regular.ttf);
-}
-
-/*
-/////////////
-/// STUFF ///
-/////////////
-*/
+@import url("/resources/css/drawer.css");
+@import url("/resources/css/grid-container.css");
+@import url("/resources/css/nav-panel.css");
+@import url("/resources/css/profile.css");
 
 body {
   margin: 0px;
-  background-color: #1b1b20;
+  background-color: var(--darker-gray-bg3);
 }
 
 main {
@@ -37,207 +21,35 @@ main {
 
   border-radius: 1ch;
 
-  box-shadow: 10px 10px 5px #18181a;
-
-  background-color: #202026;
+  box-shadow: 10px 10px 5px var(--darker-gray-bg2);
+  background-color: var(--main-bg);
 }
 
 h1 {
   margin-top: 1rem;
 
-  border-bottom-color: #bbbbbb;
-  border-bottom-style: solid;
-
-  color: #bbbbbb;
+  color: var(--default-fg);
   font-family: ChivoMono, monospace;
   text-align: center;
+
+  border-bottom-color: var(--default-fg);
+  border-bottom-style: solid;
 }
 
 h2 {
   padding-left: 1ch;
 
-  border-bottom-color: #bbbbbb;
-  border-bottom-style: solid;
-
-  color: #bbbbbb;
+  color: var(--default-fg);
   font-family: ChvioMono, monospace;
   font-weight: lighter;
+
+  border-bottom-color: var(--default-fg);
+  border-bottom-style: solid;
 }
 
 p {
-  color: #bbbbbb;
   line-height: 3ch;
+  color: var(--default-fg);
   font-family: NotoSans, sans-serif;
   font-size: large;
-}
-
-/*
-///////////////
-/// CLASSES ///
-///////////////
-*/
-
-.profile {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-height: 20rem;
-}
-
-.profile table {
-  color: #bbbbbb;
-  font-family: NotoSans, sans-serif;
-  border-spacing: 1rem;
-}
-
-.profile img {
-  max-width: 50%;
-  max-height:inherit;
-}
-
-/* COLLAPSIBLE UL */
-
-.drawer {
-  padding-left: 0;
-}
-
-.drawer li {
-  list-style: none;
-  display: grid;
-  grid-template-rows: 0fr;
-}
-
-.drawer label {
-  padding-top: 1.5ch;
-  padding-bottom: 0.5ch;
-  padding-right: 1ch;
-
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-
-  color: #bbbbbb;
-  font-family: ChivoMono, monospace;
-  text-indent: 1ch;
-
-  background-color: #24242a;
-  border-bottom-color: #28282d;
-  border-bottom-style: solid;
-
-  transition:
-    color 0.2s,
-    background-color 0.2s,
-    border-bottom-color 0.2s;
-}
-
-.drawer h2 {
-  text-align: center;
-  padding-left: 0; /* don't even know if this is needed but just in case*/
-}
-
-.drawer label + input[type="checkbox"] {
-  display: none;
-}
-
-.drawer .content {
-  color: #bbbbbb;
-  font-family: NotoSans, sans-serif;
-
-  padding: 0 10px;
-  max-height: 0;
-
-  overflow: hidden;
-  background-color: #28282d;
-
-  transition:
-    max-height 0.33s;
-}
-
-.drawer label:hover{
-  color: #dddddd;
-  background-color: #343438;
-  border-bottom-color: #404045;
-}
-
-.drawer label + input[type="checkbox"]:checked + .content {
-  max-height: 100%;
-  grid-template-rows: 1fr;
-}
-
-/* NAVBAR */
-
-.navbar {
-  top: 0px;
-
-  position: sticky;
-}
-
-.navbar ul {
-  padding: 0px;
-  margin: 0px;
-
-  list-style-type: none;
-  overflow: hidden;
-
-  background-color: #121216;
-}
-
-.navbar a {
-  padding: 1rem;
-
-  display: block;
-  float: left;
-
-  font-family: IBMPlexMono, monospace;
-  text-decoration: none;
-  text-align: center;
-
-  color: #bbbbbb;
-
-  transition:
-    color 0.2s,
-    background-color 0.2s;
-}
-
-.navbar a:hover {
-  color: white;
-  background-color: #19191d;
-}
-
-/* GRID-CONTAINER */
-
-.grid-container {
-  display: grid;
-  justify-content: center;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  font-size: xx-large;
-}
-
-.grid-container a {
-  padding: 5rem;
-  margin: 0.5rem;
-  display: block;
-
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  font-family: ChivoMono, monospace;
-  font-weight: bold;
-  border-radius: 1rem;
-
-  color: #bbbbbb;
-  background-color: #24242a;
-
-
-  transition:
-    color 0.2s,
-    background-color 0.2s;
-
-}
-
-.grid-container a:hover {
-  color: #dddddd;
-  background-color: #343438;
 }

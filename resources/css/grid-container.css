@@ -1,0 +1,36 @@
+@import url("defaults.css");
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  font-size: xx-large;
+}
+
+.grid-container a {
+  padding: 5rem;
+  margin: 0.5rem;
+
+  display: block;
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+
+  color: var(--default-fg);
+  text-decoration: none;
+  text-align: center;
+  font-family: ChivoMono, monospace;
+  font-weight: bold;
+  background-color: var(--dark-gray-bg2);
+
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+
+}
+
+.grid-container a:hover {
+  color: var(--focused-fg);
+  background-color: var(--gray-bg1);
+}

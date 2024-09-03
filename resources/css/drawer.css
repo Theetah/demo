@@ -1,0 +1,67 @@
+@import url("defaults.css");
+
+.drawer {
+  padding-left: 0;
+}
+
+.drawer li {
+  list-style: none;
+  display: grid;
+  grid-template-rows: 0fr;
+}
+
+.drawer label {
+  padding-top: 1.5ch;
+  padding-bottom: 0.5ch;
+  padding-right: 1ch;
+
+  display: flex;
+  cursor: pointer;
+
+  color: var(--default-fg);
+  font-family: ChivoMono, monospace;
+  text-indent: 1ch;
+  justify-content: space-between;
+
+  background-color: var(--dark-gray-bg1);
+  border-bottom-color: var(--dark-gray-bg3);
+  border-bottom-style: solid;
+
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border-bottom-color 0.2s;
+}
+
+.drawer h2 {
+  text-align: center;
+}
+
+.drawer .content {
+  padding: 0 10px;
+  max-height: 0;
+
+  color: var(--default-fg);
+  font-family: NotoSans, sans-serif;
+
+  overflow: hidden;
+  background-color: var(--dark-gray-bg2);
+
+  transition:
+    max-height 0.33s;
+}
+
+.drawer label:hover{
+  color: var(--focused-fg);
+  background-color: var(--gray-bg1);
+  border-bottom-color: var(--gray-bg3);
+}
+
+.drawer label + input[type="checkbox"] {
+  display: none;
+}
+
+.drawer label + input[type="checkbox"]:checked + .content {
+  max-height: 100%;
+  grid-template-rows: 1fr;
+}

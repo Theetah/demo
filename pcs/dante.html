@@ -6,14 +6,20 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  
-  <nav class="navbar">
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/recaps.html">Recaps</a></li>
-      <li><a href="/pcs.html">Player Characters</a></li>
-      <li><a href="/npcs.html">Non-player Characters</a></li>
-    </ul>
+
+  <nav id="nav-panel">
+    <label for="toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    </label>
+    <input type="checkbox" id="toggle">
+    <div id="nav-content">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/recaps.html">Recaps</a></li>
+        <li><a href="/pcs.html">Player Characters</a></li>
+        <li><a href="/npcs.html">Non-player Characters</a></li>
+      </ul>
+    </div>
   </nav>
 
   <h1>Dante</h1>
@@ -21,7 +27,7 @@
   <main>
 
     <h2>Overview</h2>
-    
+
     <div class="profile">
       <table>
         <tr>
