@@ -38,3 +38,8 @@
   font-family: "IBMPlexMono";
   src: url(/resources/fonts/IBMPlexMono-Regular.ttf);
 }
+
+@font-face {
+  font-family: "Archivo";
+  src: url(/resources/fonts/Archivo-Regular.ttf);
+}

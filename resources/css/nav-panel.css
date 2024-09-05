@@ -61,7 +61,7 @@
   display: grid;
 
   color: var(--default-fg);
-  font-family: IBMPlexMono, monospace;
+  font-family: Archivo, monospace;
   font-size: auto;
   text-decoration: none;
   white-space: nowrap;
@@ -84,7 +84,7 @@
   cursor: pointer;
 
   color: var(--default-fg);
-  font-family: IBMPlexMono, monospace;
+  font-family: Archivo, monospace;
   font-size: auto;
   text-decoration: none;
   white-space: nowrap;
@@ -133,7 +133,7 @@
   display: grid;
 
   color: var(--default-fg);
-  font-family: IBMPlexMono, monospace;
+  font-family: Archivo, monospace;
   font-size: auto;
   text-decoration: none;
   white-space: nowrap;
