@@ -2,6 +2,7 @@
 @import url("/resources/css/grid-container.css");
 @import url("/resources/css/nav-panel.css");
 @import url("/resources/css/profile.css");
+@import url("/resources/css/spell-search.css");
 
 body {
   margin: 0px;
