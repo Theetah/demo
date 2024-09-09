@@ -30,7 +30,7 @@
 }
 
 #nav-panel > input[type="checkbox"]#toggle:checked + #nav-content {
-  width: 17.5vw;
+  width: 20vw;
 }
 
 #nav-content {

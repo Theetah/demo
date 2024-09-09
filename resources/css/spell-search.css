@@ -26,7 +26,7 @@
   border-top: none;
   background-color: var(--gray-bg1);
   font-family: MartianMono;
-  font-size: x-large;
+  font-size: large;
 }
 
 #spell-table > tbody > tr > td {
