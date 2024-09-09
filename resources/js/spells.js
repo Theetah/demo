@@ -19,6 +19,7 @@ class Spell {
 }
 
 var spells = [
+
   new Spell(
     "Shield",
     "Instantaneous",
@@ -31,6 +32,7 @@ var spells = [
     damage you take, including against the triggering attack, and
     you take no damage from magic missile.`,
   ),
+
   new Spell(
     "Draft of the Sleepless",
     "5 hours",
@@ -57,6 +59,7 @@ var spells = [
     first, each additional draught made at the same time costs an
     additional magic point.`
   ),
+
   new Spell(
     "Freak Weather",
     "2 rounds",
@@ -71,6 +74,7 @@ var spells = [
     the effect, and can only cause it to manifest in a given location.
     The location must be within sight of the caster.`
   ),
+
   new Spell(
     "Detect Thoughts",
     "1 round",
@@ -130,6 +134,7 @@ var spells = [
     needing to win an opposed POW roll with the caster to be unaffected.
     The spell’s effect lasts for 1D10 hours.`
   ),
+
   new Spell(
     "Goodwill of the Forest",
     "1 round",
@@ -148,6 +153,7 @@ var spells = [
     warmth during sleep, and those that are normally predators will
     share hunted game.`
   ),
+
   new Spell(
     "Animate Flesh Thing",
     "3 minutes",
