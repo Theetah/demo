@@ -36,9 +36,9 @@ var spells = [
   new Spell(
     "Draft of the Sleepless",
     "5 hours",
-    "4*",
+    "4<sup>*</sup>",
     "2",
-    "1 ounce of gold*",
+    "1 ounce of gold<sup>*</sup>",
     false,
     `\tFashions a drug that facilitates entry into a world of dream for
     one or more participants. Those drinking a draught fall asleep very
@@ -102,7 +102,7 @@ var spells = [
   new Spell(
     "Moonlight",
     "1 round",
-    "1*",
+    "1<sup>*</sup>",
     "0",
     "Small silvery ball",
     false,
@@ -138,7 +138,7 @@ var spells = [
   new Spell(
     "Goodwill of the Forest",
     "1 round",
-    "1*",
+    "1<sup>*</sup>",
     "0",
     "---",
     false,
@@ -157,7 +157,7 @@ var spells = [
   new Spell(
     "Animate Flesh Thing",
     "3 minutes",
-    "1*",
+    "1<sup>*</sup>",
     "1d6",
     "Flesh",
     false,
@@ -196,7 +196,7 @@ window.addEventListener("load", function() {
 
     var stats = e.listStats;
 
-    var name = stats[0] + (stats[5] ? "<sup>D</sup>" : "");
+    var name = stats[0] + (stats[5] ? "<sup> D</sup>" : "");
     var castingTime = stats[1];
     var mpCost = stats[2];
     var sanityCost = stats[3];
