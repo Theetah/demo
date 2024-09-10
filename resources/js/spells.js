@@ -2,7 +2,7 @@
 
 class Spell {
 
-  constructor(name, casting_time, mp, sanity, components, dreamlands, description) {
+  constructor(name, casting_time, mp, sanity, components, dreamlands, description, href) {
     this.name = name;
     this.casting_time = casting_time;
     this.mp = mp;
@@ -10,6 +10,7 @@ class Spell {
     this.components = components;
     this.dreamlands = dreamlands;
     this.description = description;
+    this.href = href;
   }
 
   get listStats() {
@@ -27,10 +28,14 @@ var spells = [
     "0",
     "---",
     true,
+    // below description states "you have a -5 modifier..."
+    // does this negate the bonus gained by wearing armor?
+    // (or does armor not matter in the Dreamlands?)
     `An invisible barrier of magical force appears and protects you.
     Until the start of your next turn, you have a -5 modifier to all
     damage you take, including against the triggering attack, and
     you take no damage from magic missile.`,
+    "/spells/shield.html"
   ),
 
   new Spell(
@@ -196,11 +201,13 @@ window.addEventListener("load", function() {
 
     var stats = e.listStats;
 
-    var name = stats[0] + (stats[5] ? "<sup> D</sup>" : "");
+    var name = stats[0] + (stats[5] ? "<sup>D</sup>" : "");
     var castingTime = stats[1];
     var mpCost = stats[2];
     var sanityCost = stats[3];
     var components = stats[4];
+
+    name = (typeof(e.href) !== "undefined") ? `<a href=${e.href}>${name}</a>` : name;
 
     retStr += `<tr>`;
     retStr += `<td>${name}</td>`;

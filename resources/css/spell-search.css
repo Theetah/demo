@@ -31,9 +31,11 @@
 
 #spell-table > tbody > tr > td {
   padding: 8px;
-
   font-family: NotoSans;
   font-size: large;
-
   border-bottom: 1px solid var(--dark-gray-bg3);
+}
+
+#spell-table > tbody > tr > td > a:link {
+  color:
 }
