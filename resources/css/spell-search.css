@@ -36,6 +36,17 @@
   border-bottom: 1px solid var(--dark-gray-bg3);
 }
 
+/* is there a better way to do this? probably.
+ * though i don't know if such a way. */
 #spell-table > tbody > tr > td > a:link {
-  color:
+  color: var(--link-default-fg);
+}
+#spell-table > tbody > tr > td > a:visited {
+  color: var(--link-visited-fg);
+}
+#spell-table > tbody > tr > td > a:hover {
+  color: var(--link-hover-fg);
+}
+#spell-table > tbody > tr > td > a:active {
+  color: var(--link-active-fg);
 }

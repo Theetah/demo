@@ -19,6 +19,7 @@ class Spell {
 
 }
 
+// TODO: have the search alphabetised?
 var spells = [
 
   new Spell(
@@ -180,43 +181,51 @@ var spells = [
   ),
 ];
 
+var page = window.location.pathname.split("/").pop();
+
+// why does JS run *before* the page is loaded??
 window.addEventListener("load", function() {
-  const tableHeader =
-  `
-  <tr>
-    <th>Name</th>
-    <th>Casting Time</th>
-    <th>MP</th>
-    <th>Sanity</th>
-    <th>Components</th>
-  </tr>
-  `;
-  const tbody = document.getElementById("table-body");
+  // page is spell-list
+  if (page == "spells.html") {
+    const tableHeader =
+    `
+    <tr>
+      <th>Name</th>
+      <th>Casting Time</th>
+      <th>MP</th>
+      <th>Sanity</th>
+      <th>Components</th>
+    </tr>
+    `;
+    const tbody = document.getElementById("table-body");
 
-  var retStr = tableHeader;
+    var retStr = tableHeader;
 
-  for (let i = 0; i < spells.length; i++) {
+    for (let i = 0; i < spells.length; i++) {
 
-    const e = spells[i];
+      const e = spells[i];
 
-    var stats = e.listStats;
+      var stats = e.listStats;
 
-    var name = stats[0] + (stats[5] ? "<sup>D</sup>" : "");
-    var castingTime = stats[1];
-    var mpCost = stats[2];
-    var sanityCost = stats[3];
-    var components = stats[4];
+      var name = stats[0] + (stats[5] ? "<sup>D</sup>" : "");
+      var castingTime = stats[1];
+      var mpCost = stats[2];
+      var sanityCost = stats[3];
+      var components = stats[4];
 
-    name = (typeof(e.href) !== "undefined") ? `<a href=${e.href}>${name}</a>` : name;
+      name = typeof(e.href) !== "undefined" ? `<a href=${e.href}>${name}</a>` : name;
 
-    retStr += `<tr>`;
-    retStr += `<td>${name}</td>`;
-    retStr += `<td>${castingTime}</td>`;
-    retStr += `<td>${mpCost}</td>`;
-    retStr += `<td>${sanityCost}</td>`;
-    retStr += `<td>${components}</td>`;
-    retStr += `</tr>`;
+      retStr += `<tr>`;
+      retStr += `<td>${name}</td>`;
+      retStr += `<td>${castingTime}</td>`;
+      retStr += `<td>${mpCost}</td>`;
+      retStr += `<td>${sanityCost}</td>`;
+      retStr += `<td>${components}</td>`;
+      retStr += `</tr>`;
+    }
+
+    tbody.innerHTML = retStr;
+  } else {
+    // page is over a specific spell
   }
-
-  tbody.innerHTML = retStr;
 });

@@ -22,9 +22,11 @@
   --main-bg: rgb(25, 27, 28);
   --default-fg: rgb(187, 187, 187);
   --focused-fg: white;
+
   --link-default-fg: rgb(65, 115, 175);
   --link-visited-fg: rgb(45, 100, 150);
   --link-hover-fg: rgb(45, 175, 210);
+  --link-active-fg: rgb(45, 175, 210);
 }
 
 /* Fonts */
