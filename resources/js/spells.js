@@ -2,9 +2,9 @@
 
 class Spell {
 
-  constructor(name, casting_time, mp, sanity, components, dreamlands, description, href) {
+  constructor(name, castingTime, mp, sanity, components, dreamlands, description, href) {
     this.name = name;
-    this.casting_time = casting_time;
+    this.castingTime = castingTime;
     this.mp = mp;
     this.sanity = sanity;
     this.components = components;
@@ -14,7 +14,7 @@ class Spell {
   }
 
   get listStats() {
-    return [this.name, this.casting_time, this.mp, this.sanity, this.components, this.dreamlands];
+    return [this.name, this.castingTime, this.mp, this.sanity, this.components, this.dreamlands];
   }
 
 }
@@ -63,7 +63,8 @@ var spells = [
     is a sweet, thin, brown, liquid. A mild narcotic effect relaxes
     the drinker and inclines him or her towards dreams. After the
     first, each additional draught made at the same time costs an
-    additional magic point.`
+    additional magic point.`,
+    "/spells/draft-of-the-sleepless.html"
   ),
 
   new Spell(
@@ -78,7 +79,8 @@ var spells = [
     occur, a semipowerful, localized wind to blow up from nowhere,
     or other similar effects. The caster has no direct control over
     the effect, and can only cause it to manifest in a given location.
-    The location must be within sight of the caster.`
+    The location must be within sight of the caster.`,
+    "/spells/freak-weather.html"
   ),
 
   new Spell(
@@ -102,7 +104,8 @@ var spells = [
     and unless you shift your attention to another creature’s thoughts, the creature can use its
     action on its turn to make another contested POW roll; if it succeeds, the spell ends.
     Questions verbally directed at the target creature naturally shape the course of its thoughts,
-    so this spell is particularly effective as part of an interrogation.`
+    so this spell is particularly effective as part of an interrogation.`,
+    "/spells/detect-thoughts.html"
   ),
 
   new Spell(
@@ -118,7 +121,8 @@ var spells = [
     darkness or mist caused by another spell). The light is said to also
     reveal the outline of invisible creatures to the trained eye (a
     successful Spot Hidden roll is required). The area illuminated is
-    equal to 3 cubic yards per magic point invested.`
+    equal to 3 cubic yards per magic point invested.`,
+    "/spells/moonlight.html"
   ),
 
   new Spell(
@@ -138,7 +142,8 @@ var spells = [
     or herself a second opposed POW roll may be called for.
     \n\tThe spell affects all who hear the song, with each person affected
     needing to win an opposed POW roll with the caster to be unaffected.
-    The spell’s effect lasts for 1D10 hours.`
+    The spell’s effect lasts for 1D10 hours.`,
+    "/spells/siren-song.html"
   ),
 
   new Spell(
@@ -157,7 +162,8 @@ var spells = [
     engage in combat, as these acts require complicated direction that
     the caster cannot impart. However, friendly animals will share their
     warmth during sleep, and those that are normally predators will
-    share hunted game.`
+    share hunted game.`,
+    "/spells/goodwill-of-the-forest.html"
   ),
 
   new Spell(
@@ -177,11 +183,13 @@ var spells = [
     \n\tThe flesh thing continues to live for 24 hours unless killed,
     whereupon it seems to melt again into to a pool of smoking and
     stinking flesh. Within minutes the flesh has dissolved, leaving a
-    nasty-smelling oily smear on the ground.`
+    nasty-smelling oily smear on the ground.`,
+    "/spells/animate-flesh-thing.html"
   ),
 ];
 
-var page = window.location.pathname.split("/").pop();
+let path = window.location.pathname;
+var page = path.split("/").pop();
 
 // why does JS run *before* the page is loaded??
 window.addEventListener("load", function() {
@@ -226,6 +234,41 @@ window.addEventListener("load", function() {
 
     tbody.innerHTML = retStr;
   } else {
+    //  TODO: implement this
     // page is over a specific spell
+
+    var chosenSpell = null;
+    for (let i = 0; i < spells.length; i++) {
+      const s = spells[i];
+      chosenSpell = path == s.href ? s : chosenSpell;
+    }
+
+    let main = document.getElementById("main-section");
+
+    if (chosenSpell != null) {
+
+      main.innerHTML = 
+      `
+        <a href="/spells.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed">
+            <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
+          </svg>
+        </a>
+        <h2>${chosenSpell.name}</h2>
+        <p>
+          <b>Casting Time:</b> ${chosenSpell.castingTime}<br>
+          <b>Magic Points:</b> ${chosenSpell.mp}<br>
+          <b>Sanity Cost:</b> ${chosenSpell.sanity}<br>
+          <b>Components:</b> ${chosenSpell.components}<br>
+          <b>Dreamlands?</b> ${chosenSpell.dreamlands}<br>
+        </p>
+        <hr>
+        <p>${chosenSpell.description}</p>
+      `;
+    } else {
+      console.log("Spell page does not seem to exist. Redirecting to spells.html!");
+      window.location.replace("/spells.html");
+    }
+
   }
 });

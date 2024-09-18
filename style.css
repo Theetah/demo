@@ -54,3 +54,21 @@ p {
   font-family: NotoSans, sans-serif;
   font-size: large;
 }
+
+/* is there a better way to do this? probably.
+ * though i don't know such a way. */
+a {
+  font-family: NotoSans, sans-serif;
+}
+a:link {
+  color: var(--link-default-fg);
+}
+a:visited {
+  color: var(--link-visited-fg);
+}
+a:hover {
+  color: var(--link-hover-fg);
+}
+a:active {
+  color: var(--link-active-fg);
+}
