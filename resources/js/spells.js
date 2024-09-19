@@ -36,7 +36,7 @@ var spells = [
     Until the start of your next turn, you have a -5 modifier to all
     damage you take, including against the triggering attack, and
     you take no damage from magic missile.`,
-    "/spells/shield.html"
+    "spells/shield.html"
   ),
 
   new Spell(
@@ -64,7 +64,7 @@ var spells = [
     the drinker and inclines him or her towards dreams. After the
     first, each additional draught made at the same time costs an
     additional magic point.`,
-    "/spells/draft-of-the-sleepless.html"
+    "spells/draft-of-the-sleepless.html"
   ),
 
   new Spell(
@@ -80,7 +80,7 @@ var spells = [
     or other similar effects. The caster has no direct control over
     the effect, and can only cause it to manifest in a given location.
     The location must be within sight of the caster.`,
-    "/spells/freak-weather.html"
+    "spells/freak-weather.html"
   ),
 
   new Spell(
@@ -105,7 +105,7 @@ var spells = [
     action on its turn to make another contested POW roll; if it succeeds, the spell ends.
     Questions verbally directed at the target creature naturally shape the course of its thoughts,
     so this spell is particularly effective as part of an interrogation.`,
-    "/spells/detect-thoughts.html"
+    "spells/detect-thoughts.html"
   ),
 
   new Spell(
@@ -122,7 +122,7 @@ var spells = [
     reveal the outline of invisible creatures to the trained eye (a
     successful Spot Hidden roll is required). The area illuminated is
     equal to 3 cubic yards per magic point invested.`,
-    "/spells/moonlight.html"
+    "spells/moonlight.html"
   ),
 
   new Spell(
@@ -143,7 +143,7 @@ var spells = [
     \n\tThe spell affects all who hear the song, with each person affected
     needing to win an opposed POW roll with the caster to be unaffected.
     The spell’s effect lasts for 1D10 hours.`,
-    "/spells/siren-song.html"
+    "spells/siren-song.html"
   ),
 
   new Spell(
@@ -163,7 +163,7 @@ var spells = [
     the caster cannot impart. However, friendly animals will share their
     warmth during sleep, and those that are normally predators will
     share hunted game.`,
-    "/spells/goodwill-of-the-forest.html"
+    "spells/goodwill-of-the-forest.html"
   ),
 
   new Spell(
@@ -184,7 +184,7 @@ var spells = [
     whereupon it seems to melt again into to a pool of smoking and
     stinking flesh. Within minutes the flesh has dissolved, leaving a
     nasty-smelling oily smear on the ground.`,
-    "/spells/animate-flesh-thing.html"
+    "spells/animate-flesh-thing.html"
   ),
 ];
 
@@ -234,7 +234,6 @@ window.addEventListener("load", function() {
 
     tbody.innerHTML = retStr;
   } else {
-    //  TODO: implement this
     // page is over a specific spell
 
     var chosenSpell = null;
@@ -249,7 +248,7 @@ window.addEventListener("load", function() {
 
       main.innerHTML = 
       `
-        <a href="/spells.html">
+        <a href="spells.html">
           <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed">
             <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
           </svg>
@@ -267,7 +266,7 @@ window.addEventListener("load", function() {
       `;
     } else {
       console.log("Spell page does not seem to exist. Redirecting to spells.html!");
-      window.location.replace("/spells.html");
+      window.location.replace("spells.html");
     }
 
   }
