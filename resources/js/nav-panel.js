@@ -10,22 +10,22 @@ window.addEventListener("load", function() {
     <input type="checkbox" id="toggle">
     <div id="nav-content">
       <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/spells.html">Spells</a></li>
-        <li><a href="/recaps.html">Recaps</a></li>
+        <li><a href="/demo/index.html">Home</a></li>
+        <li><a href="/demo/spells.html">Spells</a></li>
+        <li><a href="/demo/recaps.html">Recaps</a></li>
         <li>
           <label for="pcs">Player Characters</label>
           <input type="checkbox" id="pcs">
           <div class="sub-panel">
             <ul>
-              <li><a href="/pcs/dante.html">Dante</a></li>
-              <li><a href="/pcs/james.html">James</a></li>
-              <li><a href="/pcs/josie.html">Josie</a></li>
-              <li><a href="/pcs/rico.html">Rico</a></li>
+              <li><a href="/demo/pcs/dante.html">Dante</a></li>
+              <li><a href="/demo/pcs/james.html">James</a></li>
+              <li><a href="/demo/pcs/josie.html">Josie</a></li>
+              <li><a href="/demo/pcs/rico.html">Rico</a></li>
             </ul>
           </div>
         </li>
-        <li><a href="/npcs.html">Non-player Characters</a></li>
+        <li><a href="/demo/npcs.html">Non-player Characters</a></li>
       </ul>
     </div>
   `;
