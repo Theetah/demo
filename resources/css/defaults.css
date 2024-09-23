@@ -32,20 +32,20 @@
 /* Fonts */
 @font-face {
   font-family: "ChivoMono";
-  src: url(resources/fonts/ChivoMono-Regular.ttf);
+  src: url(/resources/fonts/ChivoMono-Regular.ttf);
 }
 
 @font-face {
   font-family: "NotoSans";
-  src: url(resources/fonts/NotoSans-Regular.ttf);
+  src: url(/resources/fonts/NotoSans-Regular.ttf);
 }
 
 @font-face {
   font-family: "IBMPlexMono";
-  src: url(resources/fonts/IBMPlexMono-Regular.ttf);
+  src: url(/resources/fonts/IBMPlexMono-Regular.ttf);
 }
 
 @font-face {
   font-family: "MartianMono";
-  src: url(resources/fonts/MartianMono-Regular.ttf);
+  src: url(/resources/fonts/MartianMono-Regular.ttf);
 }
