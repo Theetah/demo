@@ -19,7 +19,6 @@ class Spell {
 
 }
 
-// TODO: have the search alphabetised?
 var spells = [
 
   new Spell(
@@ -187,6 +186,12 @@ var spells = [
     "/demo/spells/animate-flesh-thing.html"
   ),
 ];
+
+spells.sort((a, b) => {
+  if (a.name > b.name) return 1;
+  if (a.name < b.name) return -1;
+  return 0;
+});
 
 let path = window.location.pathname;
 var page = path.split("/").pop();
