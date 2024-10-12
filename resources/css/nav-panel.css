@@ -3,8 +3,7 @@
 #nav-panel {
   top: 0px;
   width: 0px;
-  height: 100vh;
-  position: absolute;
+  position: sticky;
   background-color: white;
 }
 
@@ -34,7 +33,7 @@
 }
 
 #nav-content {
-  position: sticky;
+  top: 0px;
   width: 0vw;
   height: 100vh;
 
