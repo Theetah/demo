@@ -1,7 +1,6 @@
 // Here we go again...
 
 class Spell {
-
   constructor(name, castingTime, mp, sanity, components, dreamlands, description, href) {
     this.name = name;
     this.castingTime = castingTime;
@@ -12,11 +11,6 @@ class Spell {
     this.description = description;
     this.href = href;
   }
-
-  get listStats() {
-    return [this.name, this.castingTime, this.mp, this.sanity, this.components, this.dreamlands];
-  }
-
 }
 
 var spells = [
@@ -28,9 +22,6 @@ var spells = [
     "0",
     "---",
     true,
-    // below description states "you have a -5 modifier..."
-    // does this negate the bonus gained by wearing armor?
-    // (or does armor not matter in the Dreamlands?)
     `An invisible barrier of magical force appears and protects you.
     Until the start of your next turn, you have a -5 modifier to all
     damage you take, including against the triggering attack, and
@@ -194,7 +185,7 @@ spells.sort((a, b) => {
 });
 
 let path = window.location.pathname;
-var page = path.split("/").pop();
+let page = path.split("/").pop();
 
 // why does JS run *before* the page is loaded??
 window.addEventListener("load", function() {
@@ -216,24 +207,19 @@ window.addEventListener("load", function() {
 
     for (let i = 0; i < spells.length; i++) {
 
-      const e = spells[i];
+      const spell = spells[i];
 
-      var stats = e.listStats;
-
-      var name = stats[0] + (stats[5] ? "<sup>D</sup>" : "");
-      var castingTime = stats[1];
-      var mpCost = stats[2];
-      var sanityCost = stats[3];
-      var components = stats[4];
-
-      name = typeof(e.href) !== "undefined" ? `<a href=${e.href}>${name}</a>` : name;
+      // state if the spell is dreamlands only
+      var name = spell.name + (spell.dreamlands ? "<sup>D</sup>" : "");
+      // "link-ify" the name if a page for it exists
+      name = typeof(spell.href) !== "undefined" ? `<a href=${spell.href}>${name}</a>` : name;
 
       retStr += `<tr>`;
       retStr += `<td>${name}</td>`;
-      retStr += `<td>${castingTime}</td>`;
-      retStr += `<td>${mpCost}</td>`;
-      retStr += `<td>${sanityCost}</td>`;
-      retStr += `<td>${components}</td>`;
+      retStr += `<td>${spell.castingTime}</td>`;
+      retStr += `<td>${spell.mp}</td>`;
+      retStr += `<td>${spell.sanity}</td>`;
+      retStr += `<td>${spell.components}</td>`;
       retStr += `</tr>`;
     }
 
@@ -241,17 +227,18 @@ window.addEventListener("load", function() {
   } else {
     // page is over a specific spell
 
+    // find the spell's info via current page path
     var chosenSpell = null;
     for (let i = 0; i < spells.length; i++) {
-      const s = spells[i];
-      chosenSpell = path == s.href ? s : chosenSpell;
+      const spell = spells[i];
+      chosenSpell = path == spell.href ? spell : chosenSpell;
     }
 
     let main = document.getElementById("main-section");
 
     if (chosenSpell != null) {
 
-      main.innerHTML = 
+      main.innerHTML =
       `
         <a href="/demo/spells.html">
           <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed">

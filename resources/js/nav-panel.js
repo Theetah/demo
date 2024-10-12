@@ -1,5 +1,7 @@
 window.addEventListener("load", function() {
-  // Is this what javascript libraries are for?
+
+  // Created this because updating each page's elements
+  // was becoming tiring;
   document.getElementById("nav-panel").innerHTML =
   `
     <label for="toggle">
