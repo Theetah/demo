@@ -187,10 +187,10 @@ spells.sort((a, b) => {
 let path = window.location.pathname;
 let page = path.split("/").pop();
 
-// why does JS run *before* the page is loaded??
+// wait for load, since JS runs even when the page elements aren't even loaded
 window.addEventListener("load", function() {
-  // page is spell-list
   if (page == "spells.html") {
+    // ...then page is spell-list
     const tableHeader =
     `
     <tr>
@@ -225,9 +225,8 @@ window.addEventListener("load", function() {
 
     tbody.innerHTML = retStr;
   } else {
-    // page is over a specific spell
+    // ...then the page is over a specific spell
 
-    // find the spell's info via current page path
     var chosenSpell = null;
     for (let i = 0; i < spells.length; i++) {
       const spell = spells[i];
@@ -257,6 +256,7 @@ window.addEventListener("load", function() {
         <p>${chosenSpell.description}</p>
       `;
     } else {
+      // ...then the spell page doesn't seem to even exist. uh oh!
       console.log("Spell page does not seem to exist. Redirecting to spells.html!");
       window.location.replace("spells.html");
     }
