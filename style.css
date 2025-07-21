@@ -1,7 +1,7 @@
-@import url("/demo/resources/css/drawer.css");
-@import url("/demo/resources/css/nav-panel.css");
-@import url("/demo/resources/css/profile.css");
-@import url("/demo/resources/css/spell-search.css");
+@import url("/resources/css/drawer.css");
+@import url("/resources/css/nav-panel.css");
+@import url("/resources/css/profile.css");
+@import url("/resources/css/spell-search.css");
 
 body {
   margin: 0px;
@@ -59,15 +59,23 @@ p {
 a {
   font-family: NotoSans, sans-serif;
 }
+
 a:link {
   color: var(--link-default-fg);
 }
-a:visited {
-  color: var(--link-visited-fg);
-}
+
 a:hover {
   color: var(--link-hover-fg);
 }
+
 a:active {
   color: var(--link-active-fg);
+}
+
+a:visited {
+  color: var(--link-visited-fg);
+}
+
+a:visited:hover {
+  color: var(--link-visited-hover-fg);
 }

@@ -23,29 +23,31 @@
   --default-fg: rgb(187, 187, 187);
   --focused-fg: white;
 
+  /* link colors */
   --link-default-fg: rgb(70, 120, 185);
-  --link-visited-fg: rgb(45, 100, 150);
   --link-hover-fg: rgb(45, 175, 210);
   --link-active-fg: rgb(45, 175, 210);
+  --link-visited-fg: rgb(125, 100, 145);
+  --link-visited-hover-fg: rgb(175, 145, 200);
 }
 
 /* Fonts */
 @font-face {
   font-family: "ChivoMono";
-  src: url(/demo/resources/fonts/ChivoMono-Regular.ttf);
+  src: url("/resources/fonts/ChivoMono-Regular.ttf");
 }
 
 @font-face {
   font-family: "NotoSans";
-  src: url(/demo/resources/fonts/NotoSans-Regular.ttf);
+  src: url("/resources/fonts/NotoSans-Regular.ttf");
 }
 
 @font-face {
   font-family: "IBMPlexMono";
-  src: url(/demo/resources/fonts/IBMPlexMono-Regular.ttf);
+  src: url("/resources/fonts/IBMPlexMono-Regular.ttf");
 }
 
 @font-face {
   font-family: "MartianMono";
-  src: url(/demo/resources/fonts/MartianMono-Regular.ttf);
+  src: url("/resources/fonts/MartianMono-Regular.ttf");
 }
