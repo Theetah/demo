@@ -1,7 +1,7 @@
-@import url("/resources/css/drawer.css");
-@import url("/resources/css/nav-panel.css");
-@import url("/resources/css/profile.css");
-@import url("/resources/css/spell-search.css");
+@import url("/demo/resources/css/drawer.css");
+@import url("/demo/resources/css/nav-panel.css");
+@import url("/demo/resources/css/profile.css");
+@import url("/demo/resources/css/spell-search.css");
 
 body {
   margin: 0px;
